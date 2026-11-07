@@ -6,7 +6,7 @@
     webserver_svc: "{{ 'httpd' if ansible_facts['os_family'] == 'RedHat' else 'apache2' }}"
     webserver_user: "{{ 'apache' if ansible_facts['os_family'] == 'RedHat' else 'www-data' }}"
     webserver_group: "{{ 'apache' if ansible_facts['os_family'] == 'RedHat' else 'www-data' }}"
-  when: webserver_pkg is not defined or webserver_svc is not defined
+  
 
 - name: Instalar o pacote do servidor web ({{ webserver_pkg }})
   ansible.builtin.package:
