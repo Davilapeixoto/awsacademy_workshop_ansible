@@ -1,6 +1,6 @@
 ---
 - name: "Provisionar HAProxy - Workshop Red Hat Academy"
-  hosts: haproxy
+  hosts: LB_aluno3
   become: true
   gather_facts: true
   roles:
